@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MMJCLogin</string>
+    <string name = "checkbox">com.vu.mmjclogin.checkbox</string>
+    <string name = "UName">com.vu.mmjclogin.UName</string>
+    <string name = "password">com.vu.mmjclogin.password</string>
+    <string name = "IUName">com.vu.mmjclogin.IUName</string>
+    <string name = "Ipassword">com.vu.mmjclogin.Ipassword</string>
+</resources>
