@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/bg"
@@ -14,33 +15,27 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        app:srcCompat="@drawable/frame"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/frame" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="201dp"
         android:layout_height="58dp"
-        android:layout_below="@+id/LButton"
-        android:layout_alignStart="@+id/LButton"
         android:layout_alignEnd="@+id/LButton"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="45dp"
         android:layout_marginTop="118dp"
         android:layout_marginEnd="110dp"
+        app:layout_constraintEnd_toEndOf="@+id/LButton"
+        app:layout_constraintTop_toBottomOf="@+id/LButton"
         app:srcCompat="@drawable/vu_logo_stacked" />
 
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
         android:layout_marginStart="104dp"
         android:layout_marginTop="142dp"
         android:layout_marginEnd="107dp"
@@ -50,15 +45,15 @@
         android:inputType="textPersonName"
         android:textColor="#fff"
         android:textColorHint="#fff"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_below="@+id/etUsername"
-        android:layout_alignStart="@+id/etUsername"
-        android:layout_alignEnd="@+id/etUsername"
         android:layout_marginStart="0dp"
         android:layout_marginTop="38dp"
         android:layout_marginEnd="0dp"
@@ -68,33 +63,36 @@
         android:inputType="textPassword"
         android:textColor="#fff"
         android:textColorHint="#fff"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/etUsername"
+        app:layout_constraintStart_toStartOf="@+id/etUsername"
+        app:layout_constraintTop_toBottomOf="@+id/etUsername" />
 
     <CheckBox
         android:id="@+id/checkbox"
         android:layout_width="178dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/LButton"
-        android:layout_alignStart="@+id/LButton"
-        android:layout_alignEnd="@+id/LButton"
         android:layout_marginStart="67dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="55dp"
         android:buttonTint="@color/colorAccent"
         android:text="Remember my details"
-        android:textColor="#fff" />
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="@+id/LButton"
+        app:layout_constraintStart_toStartOf="@+id/LButton"
+        app:layout_constraintTop_toBottomOf="@+id/LButton" />
 
     <Button
         android:id="@+id/LButton"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_below="@+id/etPassword"
-        android:layout_alignStart="@+id/etPassword"
-        android:layout_alignEnd="@+id/etPassword"
         android:layout_marginStart="-51dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="-50dp"
-        android:text="Login" />
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="@+id/etPassword"
+        app:layout_constraintStart_toStartOf="@+id/etPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
     <!---<androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -123,4 +121,4 @@
     </androidx.cardview.widget.CardView> -->
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
